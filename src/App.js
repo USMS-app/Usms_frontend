@@ -6,7 +6,10 @@ import Dashboard from "./pages/Dashboard";
 import CreateClassroom from "./pages/CreateClassroom";
 import CreateTeacher from "./pages/CreateTeacher";
 import CreateStudent from "./pages/CreateStudent";
-import TeacherDashboard from "./pages/TeacherDashboard";  // <-- import here
+import TeacherDashboard from "./pages/TeacherDashboard";
+import ClassroomsPage from "./pages/ClassroomsPage";
+import TeachersPage from "./pages/TeachersPage";
+import StudentsPage from "./pages/StudentsPage";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -36,6 +39,9 @@ function App() {
                 path="/teacher-dashboard"
                 element={<TeacherDashboard teacher={dummyTeacher} />}
               />
+              <Route path="/classrooms" element={<ClassroomsPage />} />
+              <Route path="/teachers" element={<TeachersPage />} />
+              <Route path="/students" element={<StudentsPage />} />
             </Routes>
           </main>
         </div>
